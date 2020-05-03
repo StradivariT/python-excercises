@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Fer",
+        "second_name": "Vargas",
+        "position": "Software Engineer",
+        "address": "Lol Street 123",
+        "phone_number": "1100220033",
+        "email": "lol@gmail.com",
+        "birthday": "22/08/1997"
+    },
+    {
+        "name": "Samuel",
+        "second_name": "Coral",
+        "position": "Software Engineer",
+        "address": "Lol Street 123",
+        "phone_number": "1100220033",
+        "email": "lol@gmail.com",
+        "birthday": "22/08/1997"
+    }
+]
