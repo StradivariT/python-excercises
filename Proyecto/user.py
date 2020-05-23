@@ -19,17 +19,10 @@ class User:
         self.__class__.users -= 1
 
     def __repr__(self):
-        return f'''ID: { self.id }\nName: { self.name }\nEmail: { self.email }\nPhone: { self.phone }\nAddress: { self.address }\n'''
+        return f'''Name: { self.name }'''
 
     @classmethod
-    def fromInput(cls) -> User:
-        print("Enter the following values for the new user:")
-        
-        name = input("Name: ")
-        email = input("Email: ")
-        phone = input("Phone: ")
-        address = input("Address: ")
-        
+    def fromForm(cls, name: str, email: str, phone: str, address: str) -> User:
         return cls(str(uuid.uuid4()), name, email, phone, address)
 
     @classmethod
@@ -40,10 +33,11 @@ class User:
     def isEmpty(cls) -> bool:
         return cls.users == 0
 
-    def modify(self):
-        print("Enter the following values to modify the user:")
+    def modify(self, name: str, email: str, phone: str, address: str):
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.address = address
 
-        self.name = input("Name: ")
-        self.email = input("Email: ")
-        self.phone = input("Phone: ")
-        self.address = input("Address: ")
+    def formatFile(self) -> str:
+        return f'''ID: { self.id }\nName: { self.name }\nEmail: { self.email }\nPhone: { self.phone }\nAddress: { self.address }\n'''
